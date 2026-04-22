@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test de vigilance — Résultat</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var r = params.get('r');
+      var scriptUrl = 'https://script.google.com/macros/s/AKfycbzM23Hxn0HoVqAvi49eCylFnssN6S8rvOtKP-gdQgnVk94c5Q-oWHVEEL6VAPjiEyFr/exec';
+      if (r) {
+        new Image().src = scriptUrl + '?r=' + encodeURIComponent(r) + '&t=' + Date.now();
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="container">
